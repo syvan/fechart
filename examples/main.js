@@ -1,9 +1,9 @@
 import Vue from "vue"
 import App from "./App.vue"
 
-import vueHelloWorld from './components/HelloWorld/HelloWorld.js'
+import HelloWorld from '../packages/index'
 
-Vue.use(vueHelloWorld)
+Vue.use(HelloWorld)
 Vue.config.productionTip = false;
 
 new Vue({

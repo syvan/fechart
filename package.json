@@ -1,14 +1,15 @@
 {
   "name": "fechart",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "基于echarts封装常用业务图表组件",
   "author": "xiexipeng<xxp@szltech.com>",
+  "main": "lib/fechart.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name fechart ./src/main.js"
+    "lib": "vue-cli-service build --target lib --name fechart --dest lib packages/index.js"
   },
   "repository": {
     "type": "git",
