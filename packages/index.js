@@ -1,11 +1,12 @@
 // packages / index.js
-
 // 导入单个组件
-import HelloWorld from './HelloWorld/index'
+import HelloWorld from "./HelloWorld/index"
+import Pie from "./Pie/index"
 
 // 以数组的结构保存组件，便于遍历
 const components = [
-  HelloWorld
+  HelloWorld,
+  Pie
 ]
 
 // 定义 install 方法
@@ -18,7 +19,7 @@ const install = function (Vue) {
     })
 }
 
-if (typeof window !== 'undefined' && window.Vue) {
+if (typeof window !== "undefined" && window.Vue) {
     install(window.Vue)
 }
 

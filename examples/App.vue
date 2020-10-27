@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <HelloWorld msg="Welcome to ss Vue.js App" />
+    <fe-pie />
   </div>
 </template>
 

@@ -1,9 +1,9 @@
 import Vue from "vue"
 import App from "./App.vue"
 
-import HelloWorld from '../packages/index'
-
-Vue.use(HelloWorld)
+import fechart from "../packages/index"
+console.log(fechart)
+Vue.use(fechart)
 Vue.config.productionTip = false;
 
 new Vue({
