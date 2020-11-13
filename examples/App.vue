@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to ss Vue.js App" />
     <fe-pie />
   </div>
 </template>
@@ -20,5 +19,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  width: 100vw;
+  height: 50vw;
 }
 </style>
