@@ -12,6 +12,11 @@ export default {
       type: Object,
       default: () => ({})
     },
+    // 图表位置 left right top bottom
+    chartPos: {
+      type: String,
+      default: "left"
+    }
   },
   data() {
     return {
@@ -39,12 +44,13 @@ export default {
     }
   },
   computed: {
+    // 图表总配置
     chartOption() {
       Object.keys(this.options).forEach(opt => {
         this.defaultOption[opt] = this.options[opt]
       })
       return this.defaultOption
-    }
+    },
   },
   watch: {
     chartOption(val) {
@@ -55,11 +61,12 @@ export default {
     /** 初始化图表 */
     initChart() {
       //eslint-disable-next-line
-      this.chart = echarts.init(document.getElementById("chart"));
+      this.chart = echarts.init(document.getElementById(this.chartId));
+      
       this.chart.setOption(this.chartOption);
     },
-    updateChart() {
-      this.chart.setOption(this.chartOption)
+    updateChart(val) {
+      this.chart.setOption(val)
     },
     resizeCanvas() {
       $("._fe-chart").css("width", $("._fe-wrap").width())

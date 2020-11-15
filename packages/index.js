@@ -1,10 +1,14 @@
 // packages / index.js
 // 导入单个组件
 import Pie from "./Pie/index"
+import Area from "./Area/index"
+import VerBar from "./VerBar/index"
 
 // 以数组的结构保存组件，便于遍历
 const components = [
-  Pie
+  Pie,
+  Area,
+  VerBar
 ]
 
 // 定义 install 方法
