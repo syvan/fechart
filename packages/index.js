@@ -3,12 +3,14 @@
 import Pie from "./Pie/index"
 import Area from "./Area/index"
 import VerBar from "./VerBar/index"
+import Mix from "./Mix/index"
 
 // 以数组的结构保存组件，便于遍历
 const components = [
   Pie,
   Area,
-  VerBar
+  VerBar,
+  Mix
 ]
 
 // 定义 install 方法

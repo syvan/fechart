@@ -13,6 +13,14 @@
       <fe-vbar :dataList="vbar.data" :nameList="vbar.name" chartId="vbar">
       </fe-vbar>
     </div>
+    <div class="mix">
+      <fe-mix chartId="mix">
+        <slot slot="tip">
+          <div class="left">亿元</div>
+          <div class="right">百万</div>
+        </slot>
+      </fe-mix>
+    </div>
   </div>
 </template>
 
@@ -92,6 +100,10 @@ export default {
   height: 300px;
 }
 .vbar {
+  margin-top: 50px;
+  width: 100%;
+}
+.mix {
   margin-top: 50px;
   width: 100%;
 }
