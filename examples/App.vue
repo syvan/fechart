@@ -14,11 +14,7 @@
       </fe-vbar>
     </div>
     <div class="mix">
-      <fe-mix chartId="mix">
-        <slot slot="tip">
-          <div class="left">亿元</div>
-          <div class="right">百万</div>
-        </slot>
+      <fe-mix chartId="mix" :dataListA="mix.dataA" :dataListB="mix.dataB">
       </fe-mix>
     </div>
   </div>
@@ -71,7 +67,53 @@ export default {
       vbar: {
         data: [-7,-9,2,3,5,6],
         name: [{name: "沪深300"},{name: "中证500"},{name: "创业板指"},{name: "MSCI"},{name: "证券公司"},{name: "中证银行"}]
-      }
+      },
+      mix: {
+        dataA: [
+          {
+            date: '0412',
+            value: 12
+          },
+          {
+            date: '0413',
+            value: 14
+          },
+          {
+            date: '0414',
+            value: 10
+          },
+          {
+            date: '0415',
+            value: 50
+          },
+          {
+            date: '0416',
+            value: 20
+          }
+        ],
+        dataB: [
+          {
+            date: '0412',
+            value: 120
+          },
+          {
+            date: '0413',
+            value: 140
+          },
+          {
+            date: '0414',
+            value: 134
+          },
+          {
+            date: '0415',
+            value: 50
+          },
+          {
+            date: '0416',
+            value: 200
+          }
+        ],
+      },
     }
   }
 };

@@ -62,7 +62,11 @@ export default {
         },
         yAxis: {
           type: 'category',
-          axisLine: {show: true},
+          axisLine: {
+            lineStyle: {
+              color: 'rgba(212, 217, 227, 1)'
+            }
+          },
           axisLabel: {show: false},
           axisTick: {show: false},
           splitLine: {show: false},

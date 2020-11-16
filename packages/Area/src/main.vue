@@ -6,8 +6,8 @@
         <div class="label">{{li.label}}</div>
         <div :class="['rate', li.rate>=0?'up':'down']">{{(li.rate)}}%</div>
       </div>
+      <slot name="legend"></slot>
     </div>
-    <slot name="legend"></slot>
     <div class="_fe-chart-area _fe-chart" :id="chartId"></div>
     <div class="xLbael">
       <div class="pre" v-if="showRowLabel">{{rowLabel.pre}}</div>
@@ -16,7 +16,7 @@
     </div>
   <div class="filter-wrap">
     <div class="filter-container"  v-if="showfilter">
-      <div :class="['filter-item',selectIndex===key?'select':'']" v-for="(ci,key) in filterTypeList" :key="key" @click="toggelFilter(key)">
+      <div :class="['filter-item',selectIndex==key?'select':'']" v-for="(ci,key) in filterTypeList" :key="key" @click="toggelFilter(key)">
         {{ci.label}}
       </div>
     </div>
@@ -310,7 +310,7 @@ export default {
     line-height: 2.1rem;
     border: 1px solid rgba(232, 232, 232, 1);
   }
-  .filter-item+.select {
+  .filter-item.select {
     background-color: rgba(248, 248, 248, 1);
   }
 }
