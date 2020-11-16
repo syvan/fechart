@@ -1,6 +1,6 @@
 {
   "name": "fechart",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "基于echarts封装常用业务图表组件",
   "author": "xiexipeng<xxp@szltech.com>",
