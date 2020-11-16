@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="pie">
-      <fe-pie :dataList="pie.data" chartId="pie">
-        <slot slot="title">这是标题</slot>
+      <fe-pie :dataList="pie.data" chartId="pie" piePos="right" legendPos="left">
+        <slot slot="title">资产分布</slot>
       </fe-pie>
     </div>
     <div class="area">
@@ -14,7 +14,7 @@
       </fe-vbar>
     </div>
     <div class="mix">
-      <fe-mix chartId="mix" :dataListA="mix.dataA" :dataListB="mix.dataB">
+      <fe-mix chartId="mix" :dataListA="mix.dataA" chartType="sin" :dataListB="mix.dataB">
       </fe-mix>
     </div>
   </div>
@@ -28,11 +28,9 @@ export default {
     return {
       pie: {
         data: [
-          {value: 335, name: '直接访问', color: 'black'},
-          {value: 310, name: '邮件营销', color: 'green'},
-          {value: 234, name: '联盟广告', color: 'blue'},
-          {value: 234, name: '联盟广告', color: 'blue'},
-          {value: 234, name: '联盟广告', color: 'blue'}
+          {value: 335, name: '权益类', color: 'red'},
+          {value: 310, name: '固收类', color: 'green'},
+          {value: 234, name: '现金类', color: 'blue'}
         ]
       },
       area: {
@@ -59,9 +57,10 @@ export default {
           }
         ],
         legend: [
-          {type:"rect", label:"legend", rate: 2.3},
-          {type:"circle", label:"legend", rate: -2.3}
-        ]
+          // {type:"rect", label:"legend", rate: 2.3},
+          {type:"point", label:"legend", rate: -2.3},
+          {type:"point", label:"legend", rate: 2.3}
+        ],
         // color: ['red']
       },
       vbar: {

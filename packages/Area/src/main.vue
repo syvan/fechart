@@ -46,8 +46,8 @@ export default {
     areaColor: {
       type: Array,
       default: () => [
-        {offset: 0, color: '#000'},
-        {offset: 1, color: '#ddd'}
+        {offset: 0, color: 'rgba(255, 236, 235, 1)'},
+        {offset: 1, color: 'rgba(255, 255, 255, 1)'}
       ]
     },
     // 显示x轴label
@@ -258,7 +258,7 @@ export default {
     .symbol-point {
       width: 0.5rem;
       height: 0.5rem;
-      border-radius: 5%;
+      border-radius: 50%;
     }
     .label {
       margin-left: 0.5rem;
